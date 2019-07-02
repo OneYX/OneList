@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+docker push oneyx/onelist
+# echo "$HEROKU_API_KEY" | docker login -u=_ --password-stdin registry.heroku.com
+# docker tag oneyx/onelist registry.heroku.com/onelist/web
+# docker push registry.heroku.com/onelist/web
+# docker run --rm -e HEROKU_API_KEY="$HEROKU_API_KEY" wingrunr21/alpine-heroku-cli container:release web --app onelist
